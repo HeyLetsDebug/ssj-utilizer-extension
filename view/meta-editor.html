@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="icon" href="/img/favicon-icon.png" type="image/png">
+      <title>PDF Meta Data Editor</title>
+      <link rel="stylesheet" type="text/css" href="/styles/core/must.css">
+      <link rel="stylesheet" href="/styles/core/jquery-ui.min.css"/>
+      <link rel="stylesheet" href="/styles/metaeditor.css" />
+   </head>
+   <body>
+      <div class="page-title-bar-wrapper">
+         <span class="page-popup_title">PDF Meta Editor</span>
+      </div>
+      <section id="meta-editor">
+         <input type="file" accept="application/pdf" id="file-here" name="files" class="custom-File-dragger">
+         <div class="row-cust">
+            <div class="column-cust">
+               <canvas id="pdf-preview"></canvas>
+            </div>
+            <div class="processing-wrapper">
+               <!--  <div class="loadPDF-button-wrapper">
+                  </div> -->
+
+               <div class="details-wrapper">
+                  <div class="individual-details-wrapper">
+                     <label class="formLabels" for="title-of-pdf">Title:</label><input type="text" id="title-of-pdf" class="change-title-input" name="title-of-pdf" placeholder="Wait till title of PDF shows here...">
+                  </div>
+                  <div class="individual-details-wrapper">
+                     <label class="formLabels" for="AuthorOfPDF">Autor:</label><input type="text" id="AuthorOfPDF" class="change-title-input" name="AuthorOfPDF" placeholder="Wait till author of PDF shows here...">
+                  </div>
+                  <div class="individual-details-wrapper">
+                     <label class="formLabels" for="SubjectOfPDF">Subject:</label><input type="text" id="SubjectOfPDF" class="change-title-input" name="SubjectOfPDF" placeholder="Wait till subject of PDF shows here...">
+                  </div>
+                  <div class="individual-details-wrapper">
+                     <label class="formLabels" for="KeywordsOfPDF">Keywords:</label><input type="text" id="KeywordsOfPDF" class="change-title-input" name="KeywordsOfPDF" placeholder="Wait till keywords of PDF shows here...">
+                  </div>
+               </div>
+
+               <div class="modify-button-wrapper">
+                  <button id="modify-button">Modify & Save Title</button>
+                  <button id="remove-meta-button">Remove All Meta Data</button>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
+   <script type="text/javascript" src="/js/core/jquery.min.js"></script>
+   <script type="text/javascript" src="/js/core/jquery-ui.min.js" ></script>
+   <script type="text/javascript" src="/js/function/pdf.min.js"></script>
+   <script type="text/javascript" src="/js/function/pdf.worker.min.js"></script>
+   <script type="text/javascript" src="/js/function/download.js"></script>
+   <script type="text/javascript" src="/js/function/pdf-lib.min.js"></script>
+   <script type="text/javascript" src="/js/function/pdf-meditor.js"></script>
+</html>

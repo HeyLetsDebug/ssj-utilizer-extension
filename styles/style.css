@@ -1,0 +1,67 @@
+.mainhtml
+{
+background: var(--grad-color-prime);
+background: -webkit-linear-gradient(right, var(--grad-color-prime), var(--grad-color-secondary));
+background: -moz-linear-gradient(right,var(--grad-color-prime), var(--grad-color-secondary));
+background: linear-gradient(to left, var(--grad-color-prime), var(--grad-color-secondary));
+}
+
+/*popup design css starts here*/
+.wrapper {
+    min-width: 350px;
+    max-width: 450px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.content__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 14px;
+/*    border: 2px solid #4c82c5;*/
+    margin: 15px;
+    border-radius: 5px;
+    background: white;
+}
+.pop_title {
+    color: black;
+    margin: 0px 0px 20px;
+    font-family: Roboto-Medium;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+button{
+    border-radius: 5px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-width: 0px;
+    padding: 10px 16px;
+    width: 100%;
+    cursor: pointer;
+    font-family: Roboto-Regular;
+}
+
+.button-utilities{
+    color: white;
+    padding: 14px 16px;
+    background: var(--grad-color-prime);
+    background: -webkit-linear-gradient(right, var(--grad-color-prime), var(--grad-color-secondary));
+    background: -moz-linear-gradient(right,var(--grad-color-prime), var(--grad-color-secondary));
+    background: linear-gradient(to left, var(--grad-color-prime), var(--grad-color-secondary));
+    margin-bottom: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    transition-duration: 0.5s;
+}
+.button-utilities:hover{
+    transform: scale(1.04);
+  }
+
+/*popup design css ends here*/
+
+

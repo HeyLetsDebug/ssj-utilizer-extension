@@ -1,0 +1,106 @@
+/************************PDF Merger Section Starts here*************************/
+.pdf-page-title p, .outlook-pdf-title p{
+padding: 10px 10px;
+text-align: center;
+font-size: 23px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+}
+#add-field-button {
+    width: 50%;
+    margin: 15px auto;
+    border: 2px solid #261751;
+    background-color: transparent;
+    color: #261751;
+    font-weight: 700;
+        text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+        padding: .375rem 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 25px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.mergepdf-button-wrapper{
+  text-align: center;
+}
+#mergepdf-button {
+width: 90%;
+    margin: 15px auto;
+    border: 2px solid #261751;
+    background-color: #271851;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    padding: .375rem 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 3px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#selectedFiles {
+  padding: 0px;
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#selectedFiles .draggable {
+    overflow: hidden;
+    font-weight: 600;
+    height: 35px;
+    list-style-type: none;
+    border: 1px solid #7f7f7f;
+    background-color: white;
+    color: #212121;
+    line-height: 2.5;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: move;
+    user-select: none;
+    margin: 20px auto;
+    width: 100%;
+}
+
+#pdf-merger-wrapper{
+  padding: 30px 0px;
+    background: #e1e1e1;
+    border-radius: 5px;
+    border: 2px solid #b8b6b6;
+    display: none;
+}
+
+.data-url-pdf{
+  display: none;
+}
+
+#pdf-name-input{
+  width: 50%;
+  margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 30px;
+}
+.pdf-name-li-listmerge{
+  width: 97%;
+    margin: 0px;
+    display: inline-flex;
+}
+.pdf-name-li-listmerge-delete{
+  cursor: pointer;
+    font-size: 21px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.pdf-name-li-listmerge-delete:hover{
+  color: #da4848;
+}
+
+/************************PDF Merger Section Ends here*************************/

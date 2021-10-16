@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "PDF Utilities",
+  "description": "A comprehensive tool for PDF merging and updating meta data for PDF files locally",
+  "incognito": "split",
+  "version": "0.1.5",
+  "browser_action": {
+  "default_icon": {
+         "128": "img/icon-128.png"
+      },
+  "default_popup": "popup.html"
+  },
+     "icons": {
+         "128": "img/icon-128.png",
+         "16": "img/icon-16.png",
+         "32": "img/icon-32.png",
+         "64": "img/icon-64.png"
+   },
+ "background": {
+      "persistent": true,
+      "scripts": [ "js/core/clk.js", "js/core/pgcaller.js"]
+   },
+   "permissions": [ "tabs", "activeTab", "contextMenus"]
+}

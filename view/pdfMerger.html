@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="icon" href="/img/favicon-icon.png" type="image/png">
+      <title>PDF Merger</title>
+      <link rel="stylesheet" type="text/css" href="/styles/core/must.css">
+      <link rel="stylesheet" href="/styles/core/font-awesome.min.css">
+      <link rel="stylesheet" href="/styles/core/jquery-ui.min.css"/>
+      <link rel="stylesheet" href="/styles/pdfmerger.css" />
+      <style type="text/css">
+      </style>
+   </head>
+   <body>
+      <div class="page-title-bar-wrapper">
+         <span class="page-popup_title">PDF Merger</span>
+      </div>
+      <section id="merger-editor">
+         <input type="file" accept="application/pdf" id="files" name="files" class="custom-File-dragger" multiple>
+         <section id="pdf-merger-wrapper">
+            <ul id="selectedFiles">
+            </ul>
+         </section>
+         <input type="text" name="" placeholder="Type the required name for PDF here..." id="pdf-name-input">
+         <div class="mergepdf-button-wrapper">
+            <button id="mergepdf-button">Merge PDF</button>
+         </div>
+      </section>
+   </body>
+   <script type="text/javascript" src="/js/core/jquery.min.js"></script>
+   <script type="text/javascript" src="/js/core/jquery-ui.min.js" ></script>
+   <script type="text/javascript" src="/js/function/pdf.min.js"></script>
+   <script type="text/javascript" src="/js/function/pdf.worker.min.js"></script>
+   <script type="text/javascript" src="/js/function/download.js"></script>
+   <script type="text/javascript" src="/js/function/pdf-lib.min.js"></script>
+   <script type="text/javascript" src="/js/function/pdf-merger.js"></script>
+</html>

@@ -1,0 +1,102 @@
+/************************PDF meta editor section starts here*************************/
+.row-cust
+{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dissabled-button{
+  pointer-events: none;
+  background-color: #a6a5a9 !important;
+
+}
+.change-title-input:hover{
+    border: 1px solid #ff9750;
+    color: #ff9750;
+}
+
+.change-title-input {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #e8e2f2;
+    font-size: 15px;
+    padding: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-family: Roboto-Regular;
+    box-shadow: 3px 3px 8px #c3c3c3;
+}
+
+.modify-button-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+#modify-button, #remove-meta-button {
+    font-family: Roboto-Medium;
+    letter-spacing: 1px;
+    width: 100%;
+    margin: 15px auto;
+    border: 2px solid #261751;
+    background-color: #271851;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    padding: .375rem 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 3px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#meta-editor {
+    display: flex;
+    flex-direction: column;
+}
+#pdf-preview
+{
+    /*border: 1px solid #818181;*/
+    overflow: hidden;
+    background-image: url(../img/pdf-placeholder.png);
+    background-size: 28%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #c3c3c3;
+}
+#title-of-pdf{
+  margin-top: 20px
+}
+.processing-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 46%;
+}
+.details-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.individual-details-wrapper
+{
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+}
+.formLabels
+{
+    min-width: 95px;
+        display: inline-block;
+        font-family: Roboto-Regular;
+        font-size: 16px;
+        letter-spacing: 1px;
+}
+/************************PDF meta editor section ends here*************************/
