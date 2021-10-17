@@ -9,11 +9,11 @@
 .dissabled-button{
   pointer-events: none;
   background-color: #a6a5a9 !important;
-
 }
 .change-title-input:hover{
     border: 1px solid #ff9750;
     color: #ff9750;
+    box-shadow: 3px 3px 8px #c3c3c3;
 }
 
 .change-title-input {
@@ -26,9 +26,16 @@
     margin-bottom: 10px;
     letter-spacing: 1px;
     font-family: Roboto-Regular;
-    box-shadow: 3px 3px 8px #c3c3c3;
+    box-shadow: 2px 1px 6px #e9e8e8;
 }
 
+.change-title-input:disabled
+{
+   cursor: not-allowed; 
+}
+.change-title-input:disabled:hover{
+    border: 1px solid #a5a5a5;
+}
 .modify-button-wrapper{
     display: flex;
     flex-direction: column;

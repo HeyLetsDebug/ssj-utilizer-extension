@@ -32,21 +32,27 @@ save_pdf_name.addEventListener("keydown", function(event) {
 });
 
 to_merge_files.addEventListener('change', function() {
-$("#pdf-merger-wrapper").show();
+document.getElementById("wrapper-container").setAttribute("style","display:block;")
     save_pdf_name.disabled = false;
     for (var i = 0; i < to_merge_files.files.length; i++) {
-        fileSize = parseInt(to_merge_files.files[i].size, 10) / 1024;
-        filesize = Math.round(fileSize);
+        // fileSize = parseInt(to_merge_files.files[i].size, 10) / 1024;
+        // filesize = Math.round(fileSize);
 
         $('<li class="draggable ui-state-default"/>').attr('id', revisedRandId()).appendTo($('#selectedFiles'));
         $('<p class="pdf-name-li-listmerge"/>').text(to_merge_files.files[i].name).appendTo($('#selectedFiles li:last'));
         $('<a class="data-url-pdf"/>').attr("id", URL.createObjectURL(to_merge_files.files[i])).appendTo($('#selectedFiles li:last'));
-        // $('<span />').addClass('filesize').text(' (' + filesize + 'kb)').appendTo($('#selectedFiles li a:last'));
+        $('<span />').addClass('filesize').text(' (' + readableBytes(to_merge_files.files[i].size) +')').appendTo($('#selectedFiles li .pdf-name-li-listmerge:last'));
          $('<span class="fa fa-trash pdf-name-li-listmerge-delete"/>').appendTo($('#selectedFiles li:last'));
     }
     updateArrayList();
 });
 
+function readableBytes(bytes) {
+    var i = Math.floor(Math.log(bytes) / Math.log(1024)),
+      sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+
+    return (bytes / Math.pow(1024, i)).toFixed(2) * 1 + " " + sizes[i];
+  }
 
 $("#mergepdf-button").on("click", function(e) {
                 if(cpdfbd == "1")

@@ -73,7 +73,6 @@ width: 90%;
     background: #e1e1e1;
     border-radius: 5px;
     border: 2px solid #b8b6b6;
-    display: none;
 }
 
 .data-url-pdf{
@@ -102,5 +101,35 @@ width: 90%;
 .pdf-name-li-listmerge-delete:hover{
   color: #da4848;
 }
-
+#wrapper-container
+{
+    display: none;
+    margin: 0px 3rem;
+}
 /************************PDF Merger Section Ends here*************************/
+
+ 
+.list {
+    background-color: lightblue;
+    border: 1px solid gray;
+}
+ 
+.items .ui-selected {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+ 
+.items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+}
+ 
+.items li {
+    margin: 2px;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}

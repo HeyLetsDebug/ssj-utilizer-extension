@@ -1,22 +1,9 @@
-$(document).ready(function() {
-
-    $('#modify-button').addClass("dissabled-button");
-    $('#remove-meta-button').addClass("dissabled-button");
-
-    $('#title-of-pdf').on('keydown', function() {
-        var title_value = $('#title-of-pdf').val();
-        if (title_value != '') {
-            $('#modify-button').removeClass("dissabled-button");
-        } else {
-            $('#modify-button').addClass("dissabled-button");
-        }
-    });
-
-});
-
-
 var PDFDocument = PDFLib.PDFDocument;
 var StandardFonts = PDFLib.StandardFonts
+
+var modifyButton = document.getElementById("modify-button");
+var removeMetaButton = document.getElementById("remove-meta-button");
+
 var titleInput = document.getElementById("title-of-pdf");
 var AuthorOfPDF = document.getElementById("AuthorOfPDF");
 var SubjectOfPDF = document.getElementById("SubjectOfPDF");
@@ -25,10 +12,17 @@ var to_edit_files = document.getElementById("file-here");
 var listofFiles = [];
 var nameOfFile = [];
 
+modifyButton.addEventListener("click", function(e){
+    editDocumentMetadata(listofFiles);
+})
+
+
+removeMetaButton.addEventListener("click", function(e){
+    removeDocumentMetadata(listofFiles);
+})
+
 var _PDF_DOC;
-
 var _CANVAS = document.querySelector('#pdf-preview');
-
 var _OBJECT_URL;
 
 function showPDF(pdf_url) {
@@ -68,6 +62,7 @@ function showPDF(pdf_url) {
             else {
             KeywordsOfPDF.value += contents.info.Keywords;
             }
+            removeDissableAll();
 
         }).catch(function(error) {
             alert("Error getting metadata");
@@ -76,7 +71,6 @@ function showPDF(pdf_url) {
 
 
         URL.revokeObjectURL(_OBJECT_URL);
-        $('#remove-meta-button').removeClass("dissabled-button");
     }).catch(function(error) {
         alert(error.message);
     });;
@@ -125,16 +119,6 @@ to_edit_files.addEventListener('change', function() {
     }
 
 });
-
-$("#modify-button").on("click", function(e) {
-    editDocumentMetadata(listofFiles);
-
-})
-
-$("#remove-meta-button").on("click", function(e) {
-    removeDocumentMetadata(listofFiles);
-
-})
 
 
 async function editDocumentMetadata(MeditPdf) {
@@ -191,4 +175,24 @@ function clearAll()
     AuthorOfPDF.value="";
     SubjectOfPDF.value="";
     KeywordsOfPDF.value="";
+}
+
+function setDissableAll()
+{
+    titleInput.setAttribute("disabled", "true");
+    AuthorOfPDF.setAttribute("disabled", "true");
+    SubjectOfPDF.setAttribute("disabled", "true");
+    KeywordsOfPDF.setAttribute("disabled", "true");
+    modifyButton.setAttribute("class", "dissabled-button");
+    removeMetaButton.setAttribute("class", "dissabled-button");
+}
+setDissableAll();
+function removeDissableAll()
+{
+    titleInput.removeAttribute("disabled");
+    AuthorOfPDF.removeAttribute("disabled");
+    SubjectOfPDF.removeAttribute("disabled");
+    KeywordsOfPDF.removeAttribute("disabled");
+    modifyButton.removeAttribute("class", "dissabled-button");
+    removeMetaButton.removeAttribute("class", "dissabled-button");
 }

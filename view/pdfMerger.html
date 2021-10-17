@@ -19,13 +19,15 @@
       </div>
       <section id="merger-editor">
          <input type="file" accept="application/pdf" id="files" name="files" class="custom-File-dragger" multiple>
-         <section id="pdf-merger-wrapper">
-            <ul id="selectedFiles">
-            </ul>
-         </section>
-         <input type="text" name="" placeholder="Type the required name for PDF here..." id="pdf-name-input">
-         <div class="mergepdf-button-wrapper">
-            <button id="mergepdf-button">Merge PDF</button>
+         <div id="wrapper-container">
+            <section id="pdf-merger-wrapper">
+               <ul id="selectedFiles">
+               </ul>
+            </section>
+            <input type="text" name="" placeholder="Type the required name for PDF here..." id="pdf-name-input">
+            <div class="mergepdf-button-wrapper">
+               <button id="mergepdf-button">Merge PDF</button>
+            </div>
          </div>
       </section>
    </body>
@@ -33,7 +35,7 @@
    <script type="text/javascript" src="/js/core/jquery-ui.min.js" ></script>
    <script type="text/javascript" src="/js/function/pdf.min.js"></script>
    <script type="text/javascript" src="/js/function/pdf.worker.min.js"></script>
-   <script type="text/javascript" src="/js/function/download.js"></script>
+ <!--   <script type="text/javascript" src="/js/function/download.js"></script> -->
    <script type="text/javascript" src="/js/function/pdf-lib.min.js"></script>
    <script type="text/javascript" src="/js/function/pdf-merger.js"></script>
 </html>

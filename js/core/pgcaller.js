@@ -1,6 +1,6 @@
 function showPDFMerger() {
     var w = (screen.width/1.5);
-    var h = 750;
+    var h = (screen.height/1.2);
     var left = (screen.width/2)-(w/2);
     var top = (screen.height/2)-(h/2); 
     chrome.windows.create({
@@ -14,7 +14,7 @@ function showPDFMerger() {
 }
 function metaDataEditor() {
     var w = (screen.width/1.5);
-    var h = 750;
+    var h = (screen.height/1.2);
     var left = (screen.width/2)-(w/2);
     var top = (screen.height/2)-(h/2); 
     chrome.windows.create({
