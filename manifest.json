@@ -4,7 +4,7 @@
   "name": "PDF Utilities",
   "description": "A comprehensive tool for PDF merging and updating meta data for PDF files locally",
   "incognito": "split",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "browser_action": {
   "default_icon": {
          "128": "img/icon-128.png"

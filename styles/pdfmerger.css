@@ -45,38 +45,42 @@ width: 90%;
 }
 
 #selectedFiles {
-  padding: 0px;
-  width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+    padding: 0px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #selectedFiles .draggable {
-    overflow: hidden;
-    font-weight: 600;
-    height: 35px;
-    list-style-type: none;
-    border: 1px solid #7f7f7f;
-    background-color: white;
-    color: #212121;
-    line-height: 2.5;
-    padding-left: 10px;
-    padding-right: 10px;
-    cursor: move;
-    user-select: none;
-    margin: 20px auto;
-    width: 100%;
+    font-family: Roboto-Medium;
+    cursor: grab;
+    margin: 4px;
+    width: 150px;
+    min-height: 110px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+    background: white;
+    padding: 10px;
+    border-radius: 4px !important;
 }
 
 #pdf-merger-wrapper{
-  padding: 30px 0px;
-    background: #e1e1e1;
+/*  padding: 30px 0px;*/
+    background: rgb(243, 240, 236);
     border-radius: 5px;
     border: 2px solid #b8b6b6;
-}
-
-.data-url-pdf{
-  display: none;
 }
 
 #pdf-name-input{
@@ -87,19 +91,30 @@ width: 90%;
     display: block;
     height: 30px;
 }
-.pdf-name-li-listmerge{
-  width: 97%;
-    margin: 0px;
-    display: inline-flex;
-}
 .pdf-name-li-listmerge-delete{
   cursor: pointer;
-    font-size: 21px;
-    display: inline-block;
-    vertical-align: text-bottom;
+position: relative;
 }
-.pdf-name-li-listmerge-delete:hover{
+/*.pdf-name-li-listmerge-delete:hover{
   color: #da4848;
+}*/
+.pdf-name-li-listmerge-delete:after{
+content: '';
+    display: block;
+    height: 24px;
+    width: 18px;
+    position: absolute;
+    top: -24px;
+    right: 0px;
+    background: url(../img/delete-dissabled.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pdf-name-li-listmerge-delete:hover:after
+{
+    background: url(../img/delete-icon.png);
+    background-size: contain;
+        background-repeat: no-repeat;
 }
 #wrapper-container
 {
@@ -108,28 +123,15 @@ width: 90%;
 }
 /************************PDF Merger Section Ends here*************************/
 
- 
-.list {
-    background-color: lightblue;
-    border: 1px solid gray;
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    width: 10px;
 }
- 
-.items .ui-selected {
-    background: red;
-    color: white;
-    font-weight: bold;
+
+.pdf-name-li-listmerge {
+    flex-grow: 1;
+    font-size: 12px;
+    line-height: 16px;
 }
- 
-.items {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100px;
-}
- 
-.items li {
-    margin: 2px;
-    padding: 2px;
-    cursor: pointer;
-    border-radius: 3px;
+.filesize {
+    font-size: 12px;
 }
