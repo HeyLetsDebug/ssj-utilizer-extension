@@ -7,7 +7,7 @@ var removeMetaButton = document.getElementById("remove-meta-button");
 var titleInput = document.getElementById("title-of-pdf");
 var AuthorOfPDF = document.getElementById("AuthorOfPDF");
 var SubjectOfPDF = document.getElementById("SubjectOfPDF");
-var KeywordsOfPDF = document.getElementById("KeywordsOfPDF");
+// var KeywordsOfPDF = document.getElementById("KeywordsOfPDF");
 var to_edit_files = document.getElementById("file-here");
 var listofFiles = [];
 var nameOfFile = [];
@@ -56,12 +56,12 @@ function showPDF(pdf_url) {
             SubjectOfPDF.value += contents.info.Subject;
             }
 
-             if (contents.info.Keywords == undefined || contents.info.Keywords == "" ) {
-            KeywordsOfPDF.value += "No Keywords Found";
-            }
-            else {
-            KeywordsOfPDF.value += contents.info.Keywords;
-            }
+            //  if (contents.info.Keywords == undefined || contents.info.Keywords == "" ) {
+            // KeywordsOfPDF.value += "No Keywords Found";
+            // }
+            // else {
+            // KeywordsOfPDF.value += contents.info.Keywords;
+            // }
             removeDissableAll();
 
         }).catch(function(error) {
@@ -130,7 +130,7 @@ async function editDocumentMetadata(MeditPdf) {
 
     pdfDoc.setAuthor(AuthorOfPDF.value)
     pdfDoc.setSubject(SubjectOfPDF.value)
-    pdfDoc.setKeywords(KeywordsOfPDF.value)
+    //pdfDoc.setKeywords(KeywordsOfPDF.value)
     
     pdfDoc.setProducer('')
     pdfDoc.setCreator('')
@@ -152,7 +152,7 @@ async function removeDocumentMetadata(MeditPdf) {
     pdfDoc.setCreator('')
     pdfDoc.setAuthor('')
     pdfDoc.setSubject('')
-    pdfDoc.setKeywords('')
+    //pdfDoc.setKeywords('')
 
     const pdfBytes = await pdfDoc.save();
 
@@ -174,7 +174,7 @@ function clearAll()
     titleInput.value="";
     AuthorOfPDF.value="";
     SubjectOfPDF.value="";
-    KeywordsOfPDF.value="";
+    // KeywordsOfPDF.value="";
 }
 
 function setDissableAll()
@@ -182,7 +182,7 @@ function setDissableAll()
     titleInput.setAttribute("disabled", "true");
     AuthorOfPDF.setAttribute("disabled", "true");
     SubjectOfPDF.setAttribute("disabled", "true");
-    KeywordsOfPDF.setAttribute("disabled", "true");
+    //KeywordsOfPDF.setAttribute("disabled", "true");
     modifyButton.setAttribute("class", "dissabled-button");
     removeMetaButton.setAttribute("class", "dissabled-button");
 }
@@ -192,7 +192,7 @@ function removeDissableAll()
     titleInput.removeAttribute("disabled");
     AuthorOfPDF.removeAttribute("disabled");
     SubjectOfPDF.removeAttribute("disabled");
-    KeywordsOfPDF.removeAttribute("disabled");
+    //KeywordsOfPDF.removeAttribute("disabled");
     modifyButton.removeAttribute("class", "dissabled-button");
     removeMetaButton.removeAttribute("class", "dissabled-button");
 }

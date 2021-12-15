@@ -23,6 +23,9 @@ font-size: 23px;
     border-radius: 25px;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.custom-File-dragger {
+    background: url(../img/icon-cloud-upload.png) center center no-repeat #ff000000;
+}
 .mergepdf-button-wrapper{
   text-align: center;
 }

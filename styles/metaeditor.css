@@ -15,7 +15,9 @@
     color: #ff9750;
     box-shadow: 3px 3px 8px #c3c3c3;
 }
-
+.custom-File-dragger {
+    background: url(../img/icon-mets-upload.png) center center no-repeat #ff000000;
+}
 .change-title-input {
     width: 100%;
     cursor: pointer;
