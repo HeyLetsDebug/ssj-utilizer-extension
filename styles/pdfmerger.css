@@ -1,0 +1,140 @@
+/************************PDF Merger Section Starts here*************************/
+.pdf-page-title p, .outlook-pdf-title p{
+padding: 10px 10px;
+text-align: center;
+font-size: 23px;
+    letter-spacing: 1px;
+    margin-top: 0px;
+}
+#add-field-button {
+    width: 50%;
+    margin: 15px auto;
+    border: 2px solid #261751;
+    background-color: transparent;
+    color: #261751;
+    font-weight: 700;
+        text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+        padding: .375rem 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 25px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.custom-File-dragger {
+    background: url(../img/icon-cloud-upload.png) center center no-repeat #ff000000;
+}
+.mergepdf-button-wrapper{
+  text-align: center;
+}
+#mergepdf-button {
+width: 90%;
+    margin: 15px auto;
+    border: 2px solid #261751;
+    background-color: #271851;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    padding: .375rem 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 3px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#selectedFiles {
+    padding: 0px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#selectedFiles .draggable {
+    font-family: Roboto-Medium;
+    cursor: grab;
+    margin: 4px;
+    width: 150px;
+    min-height: 110px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+    background: white;
+    padding: 10px;
+    border-radius: 4px !important;
+}
+
+#pdf-merger-wrapper{
+/*  padding: 30px 0px;*/
+    background: rgb(243, 240, 236);
+    border-radius: 5px;
+    border: 2px solid #b8b6b6;
+}
+
+#pdf-name-input{
+  width: 50%;
+  margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 30px;
+}
+.pdf-name-li-listmerge-delete{
+  cursor: pointer;
+position: relative;
+}
+/*.pdf-name-li-listmerge-delete:hover{
+  color: #da4848;
+}*/
+.pdf-name-li-listmerge-delete:after{
+content: '';
+    display: block;
+    height: 24px;
+    width: 18px;
+    position: absolute;
+    top: -24px;
+    right: 0px;
+    background: url(../img/delete-dissabled.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pdf-name-li-listmerge-delete:hover:after
+{
+    background: url(../img/delete-icon.png);
+    background-size: contain;
+        background-repeat: no-repeat;
+}
+#wrapper-container
+{
+    display: none;
+    margin: 0px 3rem;
+}
+/************************PDF Merger Section Ends here*************************/
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    width: 10px;
+}
+
+.pdf-name-li-listmerge {
+    flex-grow: 1;
+    font-size: 12px;
+    line-height: 16px;
+}
+.filesize {
+    font-size: 12px;
+}
