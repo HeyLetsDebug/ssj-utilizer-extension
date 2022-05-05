@@ -7,3 +7,7 @@
 	     metaDataEditor();
 	 window.close(); 
 	});
+	document.getElementById('pdf-organizer-button').addEventListener('click',() => {    
+		pdfOrganizer();
+	window.close(); 
+   });

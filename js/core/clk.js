@@ -11,6 +11,12 @@ chrome.runtime.onInstalled.addListener(function() {
       contexts: ["all"]
   });
 
+  chrome.contextMenus.create({
+    id: "context3",
+    title: "PDF Organizer",
+    contexts: ["all"]
+});
+
 });
 
 
@@ -19,8 +25,11 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         if (info.menuItemId === "context1"){
             showPDFMerger();
         }
-        if (info.menuItemId === "context2"){
+        else if (info.menuItemId === "context2"){
             metaDataEditor();
+        }
+        else if (info.menuItemId === "context3"){
+            pdfOrganizer();
         }
     }
 });
